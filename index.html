@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Angela Morrow Performance Creative Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --white: #ffffff;
+    --blue-light: #eef4fc;
+    --blue-mid: #ddeaf8;
+    --blue: #1a8cff;
+    --blue-dark: #0066cc;
+    --black: #0d0d0d;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+    --card-white: #ffffff;
+    --card-blue: #f0f6ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 3rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--blue); }
+
+  .nav-cta {
+    background: var(--blue) !important;
+    color: #fff !important;
+    padding: 0.5rem 1.3rem;
+    border-radius: 100px;
+  }
+
+  .nav-cta:hover { background: var(--blue-dark) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-blob {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, #ddeaf8 0%, #eef4fc 50%, transparent 80%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--blue);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6.5vw, 5.8rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.6rem;
+    color: var(--black);
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--blue);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--gray);
+    max-width: 500px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem;
+    background: var(--blue-light);
+    border-radius: 14px;
+    display: inline-flex;
+  }
+
+  .stat-item { text-align: left; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blue);
+    display: block;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .stat-divider {
+    width: 1px;
+    background: var(--blue-mid);
+    align-self: stretch;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .btn-primary {
+    background: var(--blue);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
+
+  .btn-ghost {
+    border: 1.5px solid var(--gray-light);
+    color: var(--black);
+    padding: 0.8rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: border-color 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+  /* TICKER */
+  .ticker-wrap {
+    overflow: hidden;
+    padding: 0.85rem 0;
+    background: var(--blue-light);
+    border-top: 1px solid var(--blue-mid);
+    border-bottom: 1px solid var(--blue-mid);
+  }
+
+  .ticker {
+    display: flex;
+    gap: 3rem;
+    animation: ticker 24s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .ticker-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .ticker-dot { color: var(--blue); }
+
+  /* SECTION SHARED */
+  section { padding: 5.5rem 3rem; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1.5px;
+    background: var(--blue);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    color: var(--black);
+  }
+
+  h2 em { font-style: italic; color: var(--blue); }
+
+  .section-intro {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 3rem;
+  }
+
+  /* BLUE BG SECTIONS */
+  .bg-blue { background: var(--blue-light); }
+  .bg-white { background: var(--white); }
+
+  /* GLANCE GRID */
+  .glance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .glance-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 1rem 1.2rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+  }
+
+  .glance-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--blue);
+    border-radius: 50%;
+    margin-top: 0.38rem;
+    flex-shrink: 0;
+  }
+
+  .glance-text {
+    font-size: 0.83rem;
+    color: var(--black);
+    line-height: 1.5;
+  }
+
+  /* TABS */
+  .tab-bar {
+    display: flex;
+    border-bottom: 1.5px solid var(--gray-light);
+    margin-bottom: 2.5rem;
+  }
+
+  .tab-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    padding: 0.75rem 1.8rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    margin-bottom: -1.5px;
+  }
+
+  .tab-btn:hover { color: var(--black); }
+  .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* UGC GRID */
+  .ugc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+  }
+
+  .ugc-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .ugc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(26,140,255,0.12);
+  }
+
+  .ugc-thumb {
+    aspect-ratio: 9/16;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ugc-thumb iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .ugc-thumb-2 { background: linear-gradient(160deg, #c8e0d0 0%, #a8cob8 50%, #88b8a0 100%); background: linear-gradient(160deg,#c8dfd0,#a0c4b0,#80a890); }
+  .ugc-thumb-3 { background: linear-gradient(160deg, #d0c8e8 0%, #b8a8d8 50%, #a090c8 100%); }
+  .ugc-thumb-4 { background: linear-gradient(160deg, #d8d0c8 0%, #c0b8a8 50%, #a8a090 100%); }
+
+  .play-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.9);
+  }
+
+  .play-icon svg { width: 15px; height: 15px; fill: var(--blue); margin-left: 2px; }
+
+  .hook-label {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--blue);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    z-index: 10;
+  }
+
+  .hook-label.winner { background: #16a34a; }
+
+  .ugc-info { padding: 0.85rem; }
+
+  .ugc-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.2rem;
+  }
+
+  .ugc-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+    color: var(--black);
+  }
+
+  .metrics-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    background: var(--blue-light);
+    border: 1px solid var(--blue-mid);
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    color: var(--black);
+    white-space: nowrap;
+  }
+
+  .chip span { color: var(--blue); font-weight: 500; }
+  .chip.win span { color: #16a34a; }
+
+  /* STATIC GRID */
+  .static-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.1rem;
+  }
+
+  .static-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .static-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(26,140,255,0.12);
+  }
+
+  .static-thumb {
+    aspect-ratio: 9/16;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .static-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .st-skin { background: linear-gradient(135deg, #e8ddd0 0%, #d4c4b0 100%); }
+  .st-home { background: linear-gradient(135deg, #d0dce8 0%, #b8ccd8 100%); }
+  .st-dark { background: linear-gradient(135deg, #2a2a3a 0%, #1a1a28 100%); }
+  .st-cream { background: linear-gradient(135deg, #ede8d8 0%, #d8d0bc 100%); }
+
+  .ad-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.6);
+    color: var(--gray);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    align-self: flex-end;
+    border: 1px solid rgba(255,255,255,0.8);
+  }
+
+  .ad-copy { }
+
+  .ad-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--black);
+    margin-bottom: 0.3rem;
+  }
+
+  .st-dark .ad-headline { color: #fff; }
+
+  .ad-body-text {
+    font-size: 0.65rem;
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .st-dark .ad-body-text { color: rgba(255,255,255,0.6); }
+
+  .ad-cta-pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--blue);
+    color: #fff;
+    padding: 0.28rem 0.7rem;
+    border-radius: 100px;
+    display: inline-block;
+  }
+
+  .static-info { padding: 0.85rem; }
+
+  .static-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--black);
+  }
+
+  .static-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    color: var(--gray);
+    letter-spacing: 0.07em;
+    margin-bottom: 0.6rem;
+  }
+
+  /* CASE STUDY */
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .case-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .case-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--black);
+  }
+
+  .case-block { margin-bottom: 1.6rem; }
+
+  .case-block-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.4rem;
+  }
+
+  .case-block p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.75;
+  }
+
+  .iter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .iter-box {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+    padding: 1.2rem;
+  }
+
+  .iter-box.win {
+    border-color: rgba(22,163,74,0.35);
+    background: #f0fdf4;
+  }
+
+  .iter-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .iter-box.win .iter-label { color: #16a34a; }
+
+  .iter-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: var(--black);
+  }
+
+  .iter-rows { display: flex; flex-direction: column; gap: 0.35rem; }
+
+  .iter-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+  }
+
+  .iter-row-label { color: var(--gray); }
+  .iter-row-val { color: var(--black); font-weight: 500; }
+  .iter-row-val.green { color: #16a34a; }
+
+  /* RIGHT CARDS */
+  .hyp-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .hyp-icon { font-size: 1.4rem; margin-bottom: 0.7rem; }
+
+  .hyp-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+  }
+
+  .hyp-body {
+    font-size: 0.83rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* CHART */
+  .chart-wrap {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    grid-column: 1 / -1;
+  }
+
+  .chart-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.8rem;
+    height: 110px;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 0;
+  }
+
+  .bar-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .bar {
+    width: 100%;
+    background: var(--blue-mid);
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #b8d4f0;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .bar.hi {
+    background: var(--blue);
+    border-color: var(--blue-dark);
+  }
+
+  .bar-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--blue);
+    position: absolute;
+    top: -1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .bar.hi .bar-val { color: var(--blue-dark); }
+
+  .bar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.56rem;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
+
+  /* METHODOLOGY */
+  .meth-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .meth-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 1.6rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .meth-card:hover { box-shadow: 0 8px 24px rgba(26,140,255,0.1); }
+
+  .meth-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--blue-mid);
+    line-height: 1;
+    margin-bottom: 0.7rem;
+  }
+
+  .meth-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+  }
+
+  .meth-body {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .tools-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .tool-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--blue-light);
+    border: 1px solid var(--blue-mid);
+    color: var(--blue);
+    padding: 0.32rem 0.8rem;
+    border-radius: 100px;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: var(--black);
+  }
+
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .tier-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+    padding: 1.4rem;
+  }
+
+  .tier-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-title {
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+  }
+
+  .tier-desc {
+    font-size: 0.78rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .tier-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+  .tier-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.56rem;
+    background: var(--blue-light);
+    border: 1px solid var(--blue-mid);
+    padding: 0.18rem 0.45rem;
+    border-radius: 4px;
+    color: var(--gray);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--blue-light);
+    border-top: 1px solid var(--blue-mid);
+    padding: 3.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--blue); }
+
+  .footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--gray);
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    hr { margin: 0 1.5rem; }
+    h1 { font-size: 2.6rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero-stats { flex-direction: column; gap: 1rem; padding: 1.2rem 1.5rem; }
+    .stat-divider { display: none; }
+    .glance-grid { grid-template-columns: 1fr 1fr; }
+    .ugc-grid { grid-template-columns: 1fr 1fr; }
+    .static-grid { grid-template-columns: 1fr 1fr; }
+    .case-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .iter-grid { grid-template-columns: 1fr; }
+    .meth-grid { grid-template-columns: 1fr 1fr; }
+    .tier-grid { grid-template-columns: 1fr; }
+    .chart-wrap { grid-column: 1; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    .glance-grid { grid-template-columns: 1fr; }
+    .ugc-grid { grid-template-columns: 1fr 1fr; }
+    .static-grid { grid-template-columns: 1fr 1fr; }
+    .meth-grid { grid-template-columns: 1fr; }
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible { opacity: 1; transform: none; }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 1px solid var(--gray-light); margin: 0 3rem; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Angela Morrow</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#case-study">Case Study</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#" class="nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Angela Morrow</div>
+    <h1>Performance Creative Strategist</h1>
+    <p class="hero-sub">I build paid social creative systems for DTC brands. From research and brief to iteration and scale. Specializing in UGC, static, and performance creative strategy on Meta.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">$2M+</span>
+        <span class="stat-label">Ad Spend Managed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">20%</span>
+        <span class="stat-label">Win Rate / New Concepts</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">1000+</span>
+        <span class="stat-label">Ad Briefs Written</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="#work" class="btn-primary">View Work</a>
+      <a href="#methodology" class="btn-ghost">My Process</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Hook Rate Optimization</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> UGC Creative Direction</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Static Ad Strategy</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Performance Creative Briefs</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Meta Paid Social</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> CPA Reduction</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Creative Testing Systems</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> DTC Growth Strategy</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Hook Rate Optimization</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> UGC Creative Direction</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Static Ad Strategy</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Performance Creative Briefs</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Meta Paid Social</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> CPA Reduction</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> Creative Testing Systems</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span> DTC Growth Strategy</span>
+  </div>
+</div>
+
+<!-- WORK -->
+<section id="work" class="bg-white">
+  <div class="section-label">Work</div>
+  <h2>What I Do</h2>
+
+  <div class="glance-grid fade-in">
+    <div class="glance-item"><div class="glance-dot"></div><span class="glance-text">Scroll-stopping hooks built on consumer insight, not guesswork</span></div>
+    <div class="glance-item"><div class="glance-dot"></div><span class="glance-text">Direct response copywriting that converts at every funnel stage</span></div>
+    <div class="glance-item"><div class="glance-dot"></div><span class="glance-text">Visual format diversity from lo-fi UGC to hi-fi production</span></div>
+    <div class="glance-item"><div class="glance-dot"></div><span class="glance-text">Working with creators, designers, and editors</span></div>
+    <div class="glance-item"><div class="glance-dot"></div><span class="glance-text">Iteration systems that build on winners, not replace them</span></div>
+    <div class="glance-item"><div class="glance-dot"></div><span class="glance-text">Breadth of taste across DTC skincare, telehealth, and home goods</span></div>
+  </div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('ugc',this)">UGC Videos</button>
+    <button class="tab-btn" onclick="switchTab('static',this)">Static Ads</button>
+  </div>
+
+  <!-- UGC -->
+  <div class="tab-panel active" id="ugc">
+    <div class="ugc-grid">
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Guarantee Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192698920?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Guarantee First"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">DRMTLGY · Skincare</div>
+          <div class="ugc-title">Forehead Lines Guarantee First</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>3.45%</span></div>
+            <div class="chip">Hold <span>14.81%</span></div>
+            <div class="chip">Thumb <span>22%</span></div>
+            <div class="chip">CPA <span>$26.40</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label winner">✦ Winner</div>
+          <iframe src="https://player.vimeo.com/video/1192698923?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Visual Hook Swap"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">DRMTLGY · Skincare</div>
+          <div class="ugc-title">Forehead Lines Visual Hook Swap</div>
+          <div class="metrics-row">
+            <div class="chip win">CTR <span>5.58%</span></div>
+            <div class="chip win">Hold <span>19.46%</span></div>
+            <div class="chip win">Thumb <span>45.33%</span></div>
+            <div class="chip win">CPA <span>$19.80</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Relatability Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192698921?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Forehead Lines Relatability"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">DRMTLGY · Skincare</div>
+          <div class="ugc-title">Forehead Lines Relatability Angle</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>4.12%</span></div>
+            <div class="chip">Hold <span>17.2%</span></div>
+            <div class="chip">Thumb <span>31%</span></div>
+            <div class="chip">CPA <span>$22.50</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Problem/Solution Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192698964?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sesame Care Pain Point"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">Sesame Care · Telehealth</div>
+          <div class="ugc-title">"No Networks, No Guessing" Insurance Alternative</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>2.98%</span></div>
+            <div class="chip">Hold <span>16.5%</span></div>
+            <div class="chip">Thumb <span>28%</span></div>
+            <div class="chip">CPB <span>$24.80</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Pattern Interrupt Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192698959?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sesame Care Solution"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">Sesame Care · Telehealth</div>
+          <div class="ugc-title">"Needed a Doctor Today" Urgency + Ease</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>3.77%</span></div>
+            <div class="chip">Hold <span>18.9%</span></div>
+            <div class="chip">Thumb <span>38%</span></div>
+            <div class="chip">CPB <span>$19.40</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Offer Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192698919?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soos Offer Hook"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">Soos Atelier · Home Goods</div>
+          <div class="ugc-title">"1+1 Free" Offer-Led Promo</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>2.65%</span></div>
+            <div class="chip">Hold <span>15.3%</span></div>
+            <div class="chip">Thumb <span>24%</span></div>
+            <div class="chip">CPA <span>$26.40</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Haul Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192701228?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soos Haul"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">Soos Atelier · Home Goods</div>
+          <div class="ugc-title">Soos Haul Creator Endorsement</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>3.18%</span></div>
+            <div class="chip">Hold <span>17.4%</span></div>
+            <div class="chip">Thumb <span>31%</span></div>
+            <div class="chip">CPA <span>$22.90</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ugc-card fade-in">
+        <div class="ugc-thumb" style="padding:0; background:#000;">
+          <div class="hook-label">Discovery Hook</div>
+          <iframe src="https://player.vimeo.com/video/1192701227?badge=0badge=0badge=0&autopause=0autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479&background=1autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Soos Discovery"></iframe>
+        </div>
+        <div class="ugc-info">
+          <div class="ugc-brand">Soos Atelier · Home Goods</div>
+          <div class="ugc-title">"Finally Found It" Discovery + Urgency</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>2.94%</span></div>
+            <div class="chip">Hold <span>16.8%</span></div>
+            <div class="chip">Thumb <span>28%</span></div>
+            <div class="chip">CPA <span>$29.10</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STATIC -->
+  <div class="tab-panel" id="static">
+    <div class="static-grid">
+
+      <div class="static-card fade-in">
+        <div class="static-thumb" style="padding:0; background:#f5f0eb;">
+          <img src="https://raw.githubusercontent.com/AC-Morrow/Portfolio/main/creative.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Ditch Greasy SPF"/>
+        </div>
+        <div class="static-info">
+          <div class="static-title">Ditch 'Greasy SPF' Forever</div>
+          <div class="static-type">DRMTLGY · Social Proof + Unspoken Truth</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>4.62%</span></div>
+            <div class="chip">CPA <span>$24.10</span></div>
+            <div class="chip">Live <span>3+ mo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="static-card fade-in">
+        <div class="static-thumb" style="padding:0; background:#f0ebe4;">
+          <img src="https://raw.githubusercontent.com/AC-Morrow/Portfolio/main/creative%20(1).jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Retire the Concealer"/>
+        </div>
+        <div class="static-info">
+          <div class="static-title">Retire the Concealer.</div>
+          <div class="static-type">DRMTLGY · Competitor Callout</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>3.88%</span></div>
+            <div class="chip">CPA <span>$27.50</span></div>
+            <div class="chip">Live <span>3+ mo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="static-card fade-in">
+        <div class="static-thumb" style="padding:0; background:#1a1a1a;">
+          <img src="https://raw.githubusercontent.com/AC-Morrow/Portfolio/main/creative%20(2).jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Reverse Ozempic Face"/>
+        </div>
+        <div class="static-info">
+          <div class="static-title">Reverse 'Ozempic Face' Now</div>
+          <div class="static-type">DRMTLGY · Trend Hook / Cultural Moment</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>5.14%</span></div>
+            <div class="chip">CPA <span>$21.80</span></div>
+            <div class="chip">Live <span>6+ mo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="static-card fade-in">
+        <div class="static-thumb" style="padding:0; background:#9b59b6;">
+          <img src="https://raw.githubusercontent.com/AC-Morrow/Portfolio/main/creative%20(3).jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Sesame Us vs Them"/>
+        </div>
+        <div class="static-info">
+          <div class="static-title">Getting Your Medication Shouldn't Be Hard</div>
+          <div class="static-type">Sesame Care · Us vs Them Comparison</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>4.33%</span></div>
+            <div class="chip">CPB <span>$22.60</span></div>
+            <div class="chip">Live <span>6+ mo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="static-card fade-in">
+        <div class="static-thumb" style="padding:0; background:#2d5a3d;">
+          <img src="https://raw.githubusercontent.com/AC-Morrow/Portfolio/main/creative%20(4).jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Sesame Lo-Fi Static"/>
+        </div>
+        <div class="static-info">
+          <div class="static-title">"I Needed a Doctor THAT DAY"</div>
+          <div class="static-type">Sesame Care · Lo-Fi / Organic Lookalike</div>
+          <div class="metrics-row">
+            <div class="chip">CTR <span>3.55%</span></div>
+            <div class="chip">CPB <span>$26.40</span></div>
+            <div class="chip">Live <span>3+ mo</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr/>
+
+<!-- CASE STUDY -->
+<section id="case-study" class="bg-blue">
+  <div class="section-label">Case Study</div>
+  <h2>From hypothesis to <em>endurance creative</em></h2>
+  <p class="section-intro">How Reddit comment mining became DRMTLGY's lowest-CPA concept and how one post-production swap nearly doubled the thumbstop rate.</p>
+
+  <div class="case-grid">
+    <div class="fade-in">
+      <div class="case-brand">DRMTLGY Growth Factor Serum</div>
+      <div class="case-title">The Forehead Lines Campaign</div>
+
+      <div class="case-block">
+        <div class="case-block-label">The Challenge</div>
+        <p>DRMTLGY's anti-aging creative was over-indexed on generic wrinkle messaging. The smoker lines concept had already proven that hyper-specific placement targeting outperforms broad anti-aging copy. The question was: what's the next high-signal pain point?</p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label">My Approach</div>
+        <p>Comment and review mining across DRMTLGY's existing ads and Reddit (r/30PlusSkinCare, r/SkincareAddiction) surfaced forehead line mentions at 2:1 vs smoker lines. I briefed a UGC Yapper format with three hook variations guarantee-first, insecurity angle, social proof testing which emotional lever converted hardest.</p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label">Iteration Logic</div>
+        <p>Hook A proved the concept. But the thumbstop rate (22%) was lagging behind what the body was delivering. So I isolated the one variable: swap the hook visual only, keep everything downstream identical. A creator clip of a highlighter marker tracing forehead lines delivered the visual curiosity needed to stop the scroll.</p>
+      </div>
+
+      <div class="iter-grid">
+        <div class="iter-box">
+          <div class="iter-label">Original · Hook A</div>
+          <div class="iter-title">Guarantee First</div>
+          <div class="iter-rows">
+            <div class="iter-row"><span class="iter-row-label">Thumbstop</span><span class="iter-row-val">22.0%</span></div>
+            <div class="iter-row"><span class="iter-row-label">Hold Rate</span><span class="iter-row-val">14.81%</span></div>
+            <div class="iter-row"><span class="iter-row-label">CTR</span><span class="iter-row-val">3.45%</span></div>
+            <div class="iter-row"><span class="iter-row-label">CPA</span><span class="iter-row-val">$26.40</span></div>
+          </div>
+        </div>
+        <div class="iter-box win">
+          <div class="iter-label">✦ Winner · Visual Swap</div>
+          <div class="iter-title">Highlighter Hook</div>
+          <div class="iter-rows">
+            <div class="iter-row"><span class="iter-row-label">Thumbstop</span><span class="iter-row-val green">45.33%</span></div>
+            <div class="iter-row"><span class="iter-row-label">Hold Rate</span><span class="iter-row-val green">19.46%</span></div>
+            <div class="iter-row"><span class="iter-row-label">CTR</span><span class="iter-row-val green">5.58%</span></div>
+            <div class="iter-row"><span class="iter-row-label">CPA</span><span class="iter-row-val green">$19.80</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <div class="hyp-card">
+        <div class="hyp-icon">🪝</div>
+        <div class="hyp-title">The Forehead Lines Guarantee Hook</div>
+        <div class="hyp-body">Untouchable for 3+ months. The insight that unlocked it: women don't search "anti-aging." They search "forehead lines." Specificity is conversion.</div>
+      </div>
+      <div class="hyp-card">
+        <div class="hyp-icon">🔓</div>
+        <div class="hyp-title">The Unlock</div>
+        <div class="hyp-body">By isolating the hook variable and running a post-production swap no new VO, no new script, just a new visual opening thumbstop nearly doubled without touching the downstream metrics that were already working.</div>
+      </div>
+      <div class="hyp-card">
+        <div class="hyp-icon">↗</div>
+        <div class="hyp-title">The Iterations</div>
+        <div class="hyp-body">The visual hook concept spawned 4 additional iterations across relatability angle, social proof, demo, and Botox-comparison. Three became endurance creative spending consistently for 6+ months.</div>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-wrap fade-in">
+      <div class="chart-title">Thumbstop Rate Across Hook Iterations</div>
+      <div class="chart-bars">
+        <div class="bar-wrap">
+          <div class="bar" style="height:49%"><span class="bar-val">22%</span></div>
+          <div class="bar-label">Hook A<br/>Guarantee</div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar" style="height:62%"><span class="bar-val">28%</span></div>
+          <div class="bar-label">Hook B<br/>Relatability</div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar hi" style="height:100%"><span class="bar-val">45.3%</span></div>
+          <div class="bar-label">Hook C<br/>Visual Swap ✦</div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar" style="height:68%"><span class="bar-val">31%</span></div>
+          <div class="bar-label">Hook D<br/>Social Proof</div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar" style="height:75%"><span class="bar-val">34%</span></div>
+          <div class="bar-label">Hook E<br/>Botox Comp.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr/>
+
+<!-- METHODOLOGY -->
+<section id="methodology" class="bg-white">
+  <div class="section-label">Methodology</div>
+  <h2>The system behind <em>every brief</em></h2>
+  <p class="section-intro">Creative strategy isn't ideation. It's a research-driven system where the client's CPA and revenue goals are the northstar and every brief is built to serve that number.</p>
+
+  <div class="meth-grid fade-in">
+    <div class="meth-card">
+      <div class="meth-num">01</div>
+      <div class="meth-title">Research & Signal Mining</div>
+      <div class="meth-body">Comment mining across existing ads, Reddit communities, Amazon reviews, and competitor creative. I find the language real customers use not the language brands think they use. That language becomes the hook.</div>
+    </div>
+    <div class="meth-card">
+      <div class="meth-num">02</div>
+      <div class="meth-title">Hypothesis-Led Briefs</div>
+      <div class="meth-body">Every brief starts with a testable hypothesis: "If we speak to X pain point using Y format, we expect Z improvement in metric." The creative follows the hypothesis not the other way around.</div>
+    </div>
+    <div class="meth-card">
+      <div class="meth-num">03</div>
+      <div class="meth-title">Isolation Testing</div>
+      <div class="meth-body">When a concept proves itself, I isolate one variable at a time hook visual, hook copy, format, VO to understand what's doing the work. This prevents throwing out winners and builds a scalable creative library.</div>
+    </div>
+    <div class="meth-card">
+      <div class="meth-num">04</div>
+      <div class="meth-title">CPA as Northstar</div>
+      <div class="meth-body">CTR tells me if the creative is compelling. Hold rate tells me if the story holds. CPA tells me if it works. Every creative decision traces back to the client's efficiency and revenue goals.</div>
+    </div>
+    <div class="meth-card">
+      <div class="meth-num">05</div>
+      <div class="meth-title">Endurance Architecture</div>
+      <div class="meth-body">I build creative systems that compound, not one-hit campaigns. A winning concept spawns a testing roadmap: format variations, hook iterations, persona expansions.</div>
+    </div>
+    <div class="meth-card">
+      <div class="meth-num">06</div>
+      <div class="meth-title">AI-Augmented Research</div>
+      <div class="meth-body">I use AI tools to accelerate signal mining, script iteration, and competitive analysis without losing the strategic judgment that makes briefs actually perform.</div>
+    </div>
+  </div>
+
+  <div class="tools-row fade-in">
+    <span class="tool-tag">Meta Ads Manager</span>
+    <span class="tool-tag">Motion App</span>
+    <span class="tool-tag">ChatGPT / Claude</span>
+    <span class="tool-tag">Reddit Research</span>
+    <span class="tool-tag">Amazon Review Mining</span>
+    <span class="tool-tag">CapCut</span>
+    <span class="tool-tag">Figma</span>
+    <span class="tool-tag">Notion</span>
+    <span class="tool-tag">Google Drive</span>
+  </div>
+
+  <h3>Brief Tiers</h3>
+  <div class="tier-grid fade-in">
+    <div class="tier-card">
+      <div class="tier-badge">Tier 1 Low Lift</div>
+      <div class="tier-title">Hook & Copy Iterations</div>
+      <div class="tier-desc">Post-production swaps on existing winning creative. New hook visual, new opening copy same body, same VO, same CTA. Fast to produce, high signal, low risk.</div>
+      <div class="tier-tags">
+        <span class="tier-tag">2–3 day turnaround</span>
+        <span class="tier-tag">No new shoot</span>
+        <span class="tier-tag">Existing footage</span>
+      </div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge">Tier 2 Mid Lift</div>
+      <div class="tier-title">New Concept, Proven Format</div>
+      <div class="tier-desc">New script and hook, same proven UGC or static format. Tests new messaging angles without rebuilding the whole playbook. Requires creator briefing and light production.</div>
+      <div class="tier-tags">
+        <span class="tier-tag">1–2 week turnaround</span>
+        <span class="tier-tag">Creator briefing</span>
+        <span class="tier-tag">New script</span>
+      </div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge">Tier 3 High Lift</div>
+      <div class="tier-title">Full Production Concept</div>
+      <div class="tier-desc">New concept, new format, new shoot. Reserved for validated insights that warrant real investment a new persona, a new channel, or a signal strong enough to justify full production cost.</div>
+      <div class="tier-tags">
+        <span class="tier-tag">3–4 week turnaround</span>
+        <span class="tier-tag">Full production</span>
+        <span class="tier-tag">New format</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Angela Morrow</div>
+  <div class="footer-links">
+    <a href="#">LinkedIn</a>
+    <a href="#">Email</a>
+    <a href="#">Book a Call</a>
+  </div>
+  <div class="footer-copy">© 2026 Angela Morrow</div>
+</footer>
+
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    document.querySelectorAll('#' + id + ' .fade-in').forEach((el, i) => {
+      el.classList.remove('visible');
+      setTimeout(() => el.classList.add('visible'), i * 55);
+    });
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 70);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
